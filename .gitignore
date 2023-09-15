@@ -1,0 +1,53 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# General Node.js/Express Backend
+node_modules/
+npm-debug.log
+.env
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# React Frontend (Vite)
+/dist/
+/public/
+/.vite/
+
+# IDE-specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+server/.env
+client/package-lock.json
+client/yarn.lock
