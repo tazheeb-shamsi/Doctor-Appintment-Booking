@@ -4,10 +4,10 @@ import {
   getAllDoctors,
   getSingleDoctor,
   updateDoctor,
-} from "../controllers/doctorController.js";
+} from "../controllers/doctor.controller.js";
 import { authenticate, restrict } from "../middleware/verifyToken.js";
 
-import reviewRouter from "./reviewRoutes.js";
+import reviewRouter from "./review.routes.js";
 
 const router = express.Router();
 

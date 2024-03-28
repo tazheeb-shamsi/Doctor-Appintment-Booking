@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Doctor from "./DoctorSchema";
 
 const reviewSchema = new mongoose.Schema(
   {
@@ -55,4 +54,5 @@ reviewSchema.statics.calcAverageRating = async function (doctorId) {
 reviewSchema.post("save", function () {
   this.constructor.calcAverageRating(this.doctor);
 });
+
 export default mongoose.model("Review", reviewSchema);

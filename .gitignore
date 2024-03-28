@@ -51,3 +51,4 @@ npm-debug.log
 server/.env
 client/package-lock.json
 client/yarn.lock
+server/yarn.lock

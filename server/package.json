@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "npm index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Tazheeb Shamsi",
   "license": "ISC",

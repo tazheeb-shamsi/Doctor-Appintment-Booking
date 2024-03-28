@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
-import Doctor from "../models/DoctorSchema.js";
-import Patient from "../models/PatientSchema.js";
+import Doctor from "../models/doctor.model.js";
+import Patient from "../models/patient.model.js";
 import dotenv from "dotenv";
 dotenv.config();
 

@@ -4,7 +4,7 @@ import {
   getSinglePatient,
   updatePatient,
   deletePatient,
-} from "../controllers/patientController.js";
+} from "../controllers/patient.controller.js";
 import { authenticate, restrict } from "../middleware/verifyToken.js";
 
 const router = express.Router();

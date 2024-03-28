@@ -3,10 +3,11 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import authRoutes from "./routes/authRoutes.js";
-import patientRoutes from "./routes/patientRoutes.js";
-import doctorRoutes from "./routes/doctorRoutes.js";
-import reviewRoutes from "./routes/reviewRoutes.js";
+
+import authRoutes from "./routes/auth.routes.js";
+import patientRoutes from "./routes/patient.routes.js";
+import doctorRoutes from "./routes/doctor.routes.js";
+import reviewRoutes from "./routes/review.routes.js";
 
 dotenv.config();
 

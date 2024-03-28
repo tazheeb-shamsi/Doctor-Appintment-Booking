@@ -14,6 +14,6 @@ const PatientSchema = new mongoose.Schema({
   gender: { type: String, enum: ["male", "female", "other"] },
   bloodType: { type: String },
   appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
-});
+},{timestamps: true});
 
 export default mongoose.model("Patient", PatientSchema);

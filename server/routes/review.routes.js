@@ -2,7 +2,7 @@ import express from "express";
 import {
   getAllReviews,
   createReview,
-} from "../controllers/reviewController.js";
+} from "../controllers/review.controller.js";
 import { authenticate, restrict } from "../middleware/verifyToken.js";
 
 const router = express.Router({ mergeParams: true });

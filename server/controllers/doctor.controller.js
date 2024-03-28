@@ -1,4 +1,4 @@
-import Doctor from "../models/DoctorSchema.js";
+import Doctor from "../models/doctor.model.js";
 
 export const getAllDoctors = async (req, res) => {
   try {
