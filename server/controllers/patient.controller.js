@@ -74,19 +74,20 @@ export const deletePatient = async (req, res) => {
 };
 
 export const getPatientProfile = async (req, res) => {
-  const userId = req.userId;
+  const patientId = req.userId;
   try {
-    const patient = await Patient.findById(userId);
+    const patient = await Patient.findById(patientId).select("-password");
+
     if (!patient) {
       return res
         .status(404)
         .json({ success: false, message: "Patient not found" });
     }
-    const { password, ...rest } = user._doc;
+    // const { password, ...rest } = user._doc;
     res.status(200).json({
       success: true,
       message: "Found patient info.. ",
-      data: { ...rest },
+      data: patient ,
     });
   } catch (error) {
     res.status(500).json({

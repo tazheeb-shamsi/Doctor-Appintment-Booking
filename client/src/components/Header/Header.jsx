@@ -1,5 +1,4 @@
 import logo from "/images/logo.png";
-import userImg from "/images/avatar-icon.png";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { useContext, useEffect, useRef } from "react";
@@ -91,9 +90,9 @@ const Header = () => {
                       : "patients/profile/me"
                   }`}
                 >
-                  <figure className="w-[40px] h-[40px] rounded-full cursor-pointer ">
+                  <figure className="w-[40px] h-[40px] rounded-full cursor-pointer border-2 border-primaryColor">
                     <img
-                      src={userImg}
+                      src={user?.photo}
                       className="w-full rounded-full"
                       alt="avatar"
                     />

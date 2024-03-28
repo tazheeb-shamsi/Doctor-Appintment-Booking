@@ -13,25 +13,28 @@ const router = express.Router();
 
 // ====== patient endpoints ========
 router.get("/", authenticate, restrict({ user: ["admin"] }), getAllPatient);
+
 router.get(
   "/:id",
   authenticate,
   restrict({ user: ["patient"] }),
   getSinglePatient
 );
-router.get("/", authenticate, restrict({ user: ["admin"] }), getAllPatient);
+
 router.put(
   "/:id",
   authenticate,
   restrict({ user: ["patient"] }),
   updatePatient
 );
+
 router.delete(
   "/:id",
   authenticate,
   restrict({ user: ["patient", "admin"] }),
   deletePatient
 );
+
 router.get(
   "/profile/me",
   authenticate,
