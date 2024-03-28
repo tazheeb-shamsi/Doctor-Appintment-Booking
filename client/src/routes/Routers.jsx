@@ -6,6 +6,9 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Contact from "../pages/Contact";
 import Services from "../pages/Services";
+import PatientProfile from "../Dashborad/PatientProfile/PatientProfile";
+import DoctorProfile from "../Dashborad/DoctorProfile/DoctorProfile";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 const Routers = () => {
   return (
@@ -18,6 +21,22 @@ const Routers = () => {
       <Route path="/register" element={<Signup />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route
+        path="/patients/profile/me"
+        element={
+          <ProtectedRoutes allowedRoles={["patient"]}>
+            <PatientProfile />
+          </ProtectedRoutes>
+        }
+      />
+      <Route
+        path="/doctors/profile/me"
+        element={
+          <ProtectedRoutes allowedRoles={["doctor"]}>
+            <DoctorProfile />
+          </ProtectedRoutes>
+        }
+      />
     </Routes>
   );
 };
