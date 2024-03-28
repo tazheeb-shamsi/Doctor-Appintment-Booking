@@ -27,7 +27,7 @@ const dbConnection = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Database connection established 🎉");
+    console.log("🎉 Database connection established ");
   } catch (error) {
     console.log("Error while establishing Database connection 😒");
   }
@@ -46,5 +46,5 @@ app.use("/api/v1/reviews", reviewRoutes);
 
 app.listen(port, () => {
   dbConnection();
-  console.log(`Server is listening on port: ${port}`);
+  console.log(`🎯 Server is listening on port: ${port}`);
 });

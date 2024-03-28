@@ -1,3 +1,4 @@
+import Booking from "../models/booking.model.js";
 import Doctor from "../models/doctor.model.js";
 
 export const getAllDoctors = async (req, res) => {
@@ -83,6 +84,30 @@ export const deleteDoctor = async (req, res) => {
     res.status(500).json({
       success: false,
       message: "Failed to delete Doctor Data",
+    });
+  }
+};
+
+export const getDoctorProfile = async (req, res) => {
+  const doctorId = req.userId;
+  try {
+    const doctor = await Doctor.findById(userId);
+    if (!doctor) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Doctor not found" });
+    }
+    const { password, ...rest } = user._doc;
+    const appointments = Booking.find({ doctor: doctorId });
+    res.status(200).json({
+      success: true,
+      message: "Found doctors info.. ",
+      data: { ...rest, appointments },
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Oops! Unable to find doctors info..",
     });
   }
 };

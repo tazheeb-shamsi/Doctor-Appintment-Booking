@@ -2,6 +2,7 @@ import express from "express";
 import {
   deleteDoctor,
   getAllDoctors,
+  getDoctorProfile,
   getSingleDoctor,
   updateDoctor,
 } from "../controllers/doctor.controller.js";
@@ -23,6 +24,12 @@ router.delete(
   authenticate,
   restrict({ user: ["doctor", "admin"] }),
   deleteDoctor
+);
+router.get(
+  "/profile/me",
+  authenticate,
+  restrict({ user: ["doctor", "admin"] }),
+  getDoctorProfile
 );
 
 export default router;
